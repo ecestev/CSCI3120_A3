@@ -1,0 +1,19 @@
+Title: Requests for Same File Spread Randomly Throughout Series of Requests for Files of 
+Different Sizes
+
+Author: Stephen Sampson B00568374
+
+Purpose: The purpose of this test is to see how the web server will react when the client
+sends a series of HTTP requests in a random order where some of the requests are for the same file.
+
+
+Expected Result: The web server should add all valid requests to the queue. Jobs will be sorted 
+by size but where any jobs have the same size, they will be sorted by their sequence number.
+Therefore files will be processed SJF where requests of identical filesize will be handled in
+a FCFS manner.
+
+Actual order of completion will vary based on CPU scheduling as with all of these tests where the server
+is multi-threaded
+
+On the client side, ten HTTP responses will be sent 'HTTP/1.1 200 OK' followed by the file
+that was requested.

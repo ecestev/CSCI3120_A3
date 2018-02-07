@@ -1,0 +1,8 @@
+Title: Test Verification Tool
+
+Author: Stephen Sampson B00568374
+
+Purpose: The purpose of this test file is to verify the behavior of tests 6 and 7. This test is a single
+valid HTTP request so the desired behavior is that after sending a malformed request to the server followed
+by this test, this test is processed as normal with the sequence number being 1 and the global counter 
+maintining proper values throughout the process (visible only in debug mode)

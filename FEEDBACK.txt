@@ -1,0 +1,28 @@
+Student CSID: ssampson
+Assignment 3 Feedback
+
+/*
+ *
+ * Please note that comments on any mark deductions are given below the mark breakdown.
+ *
+ */
+
+Code
+    + Structure and Design of Web Server    10/10
+    + Implementation of Work Queue           5/5 
+    + Protection of Schedulers               5/5 
+    + Functionality (automated tests)       10/10
+    Test Suite 
+    + Quality (effectiveness of the tests)   5/5
+    + Number of tests                       10/10
+    Code Clarity                             5/5
+   -----------------------------------------------------------
+   Total                                    50/50
+
+
+Comments:
+
+
+Excellent!
+
+

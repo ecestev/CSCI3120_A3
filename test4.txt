@@ -1,0 +1,11 @@
+Title: Performance Testing
+
+Author: Stephen Sampson B00568374
+
+Purpose: The purpose of this test is to categorize the response times for the schedulers method where a series
+of HTTP requests are all sent at the same time. Processing order will be random so we will deal with averages.
+
+
+
+
+

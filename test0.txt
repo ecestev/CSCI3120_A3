@@ -1,0 +1,35 @@
+Title: Some Files not Found
+
+Author: Stephen Sampson B00568374
+
+Purpose: The purpose of this test is to see how the web server will react when the client
+sends a a series of HTTP requests where some of the requests are for a filename that does 
+not match any files in the working directory. This will test the sequence counting and error
+handling of the multithreaded web server. 
+
+Expected Result: The web server should add all valid requests to the queue. The request for
+the file not found will not be assigned a sequence order or added to the queue, therefore 
+requests 1,2,4,5,6,8,9, and 10 will be processed but requests 3 and 7 will not. The suspected 
+order of completion is shown below however actual order will vary depending on CPU scheduling.
+
+Request 1 Completed
+Request 2 Completed
+Request 3 Completed
+Request 4 Completed
+Request 5 Completed
+Request 6 Completed
+Request 7 Completed
+Request 8 Completed
+
+On the client side, ten HTTP responses will be sent, two being 'HTTP/1.1 404 File Not Found'
+
+Thread 1 HTTP/1.1 200 OK
+Thread 2 HTTP/1.1 200 OK
+Thread 3 HTTP/1.1 404 File Not Found
+Thread 4 HTTP/1.1 200 OK
+Thread 5 HTTP/1.1 200 OK
+Thread 6 HTTP/1.1 200 OK
+Thread 7 HTTP/1.1 404 File Not Found
+Thread 8 HTTP/1.1 200 OK
+Thread 9 HTTP/1.1 200 OK
+Thread 10 HTTP/1.1 200 OK

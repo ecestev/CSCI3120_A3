@@ -1,0 +1,12 @@
+Title: Improper HTTP Protocol
+
+Author: Stephen Sampson B00568374
+
+Purpose: The purpose of this test is to see how the web server will react when the client
+sends a malformed HTTP request where the method and location are acurate but the protocol is not.
+
+Expected Result: The web server should sent error message 400 to the client but not schedule the request
+or increment the sequence counter.
+
+This will be tested by running test 8.in immediately after this test and verifying that it is assigned
+sequence number 1.
